@@ -20,3 +20,21 @@ class Solution:
             # than the current max_profit sometime later
             min_buy = min(min_buy,p)
         return max_profit
+
+
+# 双指针法
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        res = 0
+        if prices:
+            min_v = prices[0]
+            for i in range(len(prices)):
+                if prices[i] < min_v:
+                    min_v = prices[i]
+                if prices[i] - min_v > res:
+                    res = prices[i] - min_v
+        return res
