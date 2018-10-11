@@ -8,6 +8,10 @@
 #         self.left = None
 #         self.right = None
 
+# 前序遍历二叉树
+# 然后借助巧妙的#，相当于入队列
+# 比较
+
 class Solution(object):
     def isSameTree(self, p, q):
         """
