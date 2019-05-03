@@ -27,3 +27,25 @@ class Solution(object):
             if root.right:
                 self.helper(root.right, res)
         return res
+
+"""
+iteratively loop solution use stack
+"""
+class Solution(object):
+    def preorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        res = []
+        if not root:
+            return res
+        stack = [root]
+        while stack:
+            a = stack.pop()
+            res.append(a.val)
+            if a.right:
+                stack.append(a.right)
+            if a.left:
+                stack.append(a.left)
+        return res
