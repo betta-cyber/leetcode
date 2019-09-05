@@ -1,0 +1,11 @@
+[package]
+name = "rust-leetcode"
+version = "0.1.0"
+authors = ["LightStrawberry <l21828604@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+leetcode_prelude = "0.2"
+rand = "0.6"
