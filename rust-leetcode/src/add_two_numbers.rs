@@ -22,6 +22,7 @@ impl Solution {
                 carry = 1;
             }
 
+            // new nodelist
             ref_head.next = Some(Box::new(ListNode::new(sum)));
             ref_head = ref_head.next.as_mut().unwrap();
 
@@ -29,6 +30,7 @@ impl Solution {
             l2 = l2.map(|n|n.next.as_ref()).unwrap_or(None);
         }
 
+        // if carry > 0 need a new node for 1 to append
         if carry > 0 {
             ref_head.next = Some(Box::new(ListNode::new(1)));
         }
