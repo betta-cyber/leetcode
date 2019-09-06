@@ -8,4 +8,5 @@ cargo test --lib add_binary -- --nocapture
 
 ### Benchmark
 ``
-cargo bench --lib add_binary -- --nocapture`
+cargo bench --lib add_binary -- --nocapture
+``
