@@ -10,3 +10,5 @@ pub mod reverse_integer;
 pub mod palindrome_number;
 pub mod add_binary;
 pub mod plus_one;
+pub mod add_to_array_form_of_integer;
+pub mod binary_tree_inorder_traversal;
