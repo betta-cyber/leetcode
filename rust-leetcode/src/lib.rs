@@ -12,3 +12,4 @@ pub mod add_binary;
 pub mod plus_one;
 pub mod add_to_array_form_of_integer;
 pub mod binary_tree_inorder_traversal;
+pub mod convert_sorted_array_to_binary_search_tree;
