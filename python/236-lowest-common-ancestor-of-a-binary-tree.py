@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -15,21 +18,21 @@ class Solution(object):
         """
         self.res = None
         self.dfs(root, p, q)
-        
+
         return self.res
-        
+
     def dfs(self, root, p, q):
-        
+
         if not root:
             return 0
         left = self.dfs(root.left, p, q)
         right = self.dfs(root.right, p, q)
         mid = (root == p or root == q)
-        
+
         if mid + left + right >= 2:
             self.res = root
         return left or right or mid
-        
+
 
 # 对二叉树做后序遍历，回溯
 # 回溯时： 捕获mid，即当前节点是否为p或q；

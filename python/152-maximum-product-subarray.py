@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
 class Solution(object):
     def maxProduct(self, nums):
         """
@@ -6,7 +9,7 @@ class Solution(object):
         """
         if not nums:
             return 0
-        
+
         curv = maxv = minv = nums[0]
         res = [curv]
         for i in nums[1:]:
@@ -18,7 +21,6 @@ class Solution(object):
             maxv = max(curv, a, b)
             minv = min(curv, a, b)
             res.append(maxv)
-        
+
         # 结果是最大值数组中的最大值。
         return max(res)
-        
