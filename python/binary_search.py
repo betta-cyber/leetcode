@@ -28,4 +28,3 @@ def binary_search_no_double(blist, item):
 
 l = [2,5,6,7,11,13,13,16,18,64,77,79]
 print binary_search(l, 13)
-
