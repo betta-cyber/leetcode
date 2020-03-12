@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def pathSum(self, root, sum):
         """
@@ -17,7 +18,7 @@ class Solution(object):
         count = 0
         res = self.dfs(root, count, sum)
         return res
-    
+
     def dfs(self, root, count, sum):
         cc = self.caculate_sum(root, 0, sum)
         count += cc
@@ -28,7 +29,7 @@ class Solution(object):
             r = self.dfs(root.right, 0, sum)
             count += r
         return count
-            
+
     def caculate_sum(self, root, c, sum):
         count = 0
         if not root:
