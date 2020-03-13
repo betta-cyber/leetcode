@@ -18,13 +18,12 @@ class LRUCache(object):
         """
 
         # 更新数据，把刚用过的拉到最前面
-        try:
+        print(self.cache)
+        if key in self.data:
             self.cache.remove(key)
-            self.cache.append(key)
-        except Exception:
-            pass
-
-        return self.data[key]
+            self.cache.insert(0, key)
+            return self.data[key]
+        return -1
 
     def put(self, key, value):
         """
@@ -33,14 +32,18 @@ class LRUCache(object):
         :rtype: None
         """
 
-        self.cache.insert(0, key)
-
-        # 删除字典数据
-        if len(self.cache) > self.capacity:
-            need_del = self.cache[-1]
-            del(self.cache[-1])
-            del(self.data[need_del])
-        self.data[key] = value
+        if key in self.data:
+            self.data[key] = value
+            self.cache.remove(key)
+            self.cache.insert(0, key)
+        else:
+            # 删除字典数据
+            self.data[key] = value
+            if len(self.cache) >= self.capacity:
+                need_del = self.cache[-1]
+                del(self.cache[-1])
+                del(self.data[need_del])
+            self.cache.insert(0, key)
 
 
 # Your LRUCache object will be instantiated and called as such:
