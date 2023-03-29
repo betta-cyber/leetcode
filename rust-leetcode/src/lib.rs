@@ -13,3 +13,5 @@ pub mod plus_one;
 pub mod add_to_array_form_of_integer;
 pub mod binary_tree_inorder_traversal;
 pub mod convert_sorted_array_to_binary_search_tree;
+pub mod merge_two_sorted_lists;
+pub mod rotate_list;
