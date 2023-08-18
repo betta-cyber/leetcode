@@ -15,3 +15,4 @@ pub mod binary_tree_inorder_traversal;
 pub mod convert_sorted_array_to_binary_search_tree;
 pub mod merge_two_sorted_lists;
 pub mod pizza_with_3n_slices;
+pub mod remove_element;
